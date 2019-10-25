@@ -1,4 +1,3 @@
-package PACKAGE_NAME;
-
-public class Writable {
+public class Writable1 {
+    
 }
