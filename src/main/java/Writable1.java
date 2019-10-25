@@ -1,3 +1,4 @@
 public class Writable1 {
-    public 
+    @Override
+    protected void 
 }
