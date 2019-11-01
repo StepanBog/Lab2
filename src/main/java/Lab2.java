@@ -25,6 +25,7 @@ public class Lab2{
         job.setMapperClass(AirportMapper.class);
         job.setReducerClass(AirportReducer.class);
         job.setPartitionerClass(AirportPartitioner.class);
+        job.setGroupingComparatorClass(AirportComparator.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
         job.setNumReduceTasks(2);
