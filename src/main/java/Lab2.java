@@ -14,8 +14,8 @@ public class Lab2{
             System.exit(-1);
         }
         Job job = Job.getInstance();
-        job.setJarByClass(WordCountApp.class);
-        job.setJobName("Word count");
+        job.setJarByClass(Lab2.class);
+        job.setJobName("Lab2");
         FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
         job.setMapperClass(WordMapper.class);
