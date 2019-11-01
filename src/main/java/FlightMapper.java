@@ -9,7 +9,7 @@ import java.io.IOException;
 public class FlightMapper  extends Mapper<IntWritable, Text,AirportKey,Text> {
     protected void map(IntWritable key, Text value, Context context) throws IOException, InterruptedException{
         String[] words = value.toString().split(",");
-        context.write(new AirportKey(words[14].replace("\"",""),1), new  Text(words[18]).);
+        context.write(new AirportKey(words[14].replace("\"",""),1), new  Text(words[18].replace("\"","")));
     }
 
 }
