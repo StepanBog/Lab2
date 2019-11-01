@@ -7,6 +7,13 @@
     <groupId>Lab2</groupId>
     <artifactId>Lab2</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-common</artifactId>
+            <version>3.1.2</version>
+        </dependency>
+    </dependencies>
 
 
 </project>
