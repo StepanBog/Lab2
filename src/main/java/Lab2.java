@@ -21,9 +21,9 @@ public class Lab2{
         job.setJobName("Lab2");
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class,AirportMapper.class);
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class,FlightMapper.class);
-        FileOutputFormat.setOutputPath(job, new Path(args[1]));
-        job.setMapperClass(WordMapper.class);
-        job.setReducerClass(WordReducer.class);
+        FileOutputFormat.setOutputPath(job, new Path(args[2]));
+        job.setMapperClass(AirportMapper.class);
+        job.setReducerClass(AirportReducer.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
         job.setNumReduceTasks(2);
