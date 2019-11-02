@@ -1,9 +1,9 @@
+import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
-import org.w3c.dom.Text;
 
 import java.util.Iterator;
 
-public class AirportReducer extends Reducer <AirportKey, Text,Text, Reducer.Context> {
+public class AirportReducer extends Reducer <AirportKey, Text,Text, Text> {
     public void reduce(AirportKey key, Iterable<Text> text, Context context){
         Iterator<Text> it = text.iterator();
         String airportName = it.next().toString();
