@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class AirportMapper  extends Mapper<IntWritable, Text,AirportKey,Text> {
     protected void map(IntWritable key, Text value, Context context) throws IOException, InterruptedException{
-        String[] words = value.toString().splt(",[\"]");
+        String[] words = value.toString().split(",[\"]");
         String airportID = words[0].replace("\"","");
         String airportName = words[1].replace("\"","");
         context.write(new AirportKey(airportID,0), new  Text(airportName));
