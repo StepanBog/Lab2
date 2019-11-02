@@ -3,7 +3,7 @@ import org.w3c.dom.Text;
 
 import java.util.Iterator;
 
-public class AirportReducer extends Reducer{
+public class AirportReducer extends Reducer <AirportKey{
     public void reduce(AirportKey key, Iterable<Text> text, Context context){
         Iterator<Text> it = text.iterator();
         String airportName = it.next().toString();
