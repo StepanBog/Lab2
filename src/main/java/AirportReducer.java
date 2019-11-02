@@ -9,6 +9,7 @@ public class AirportReducer extends Reducer{
         String airportName = it.next().toString();
         int minTime = Integer.MAX_VALUE;
         int maxTime = Integer.MIN_VALUE;
+        int middleTime = 0;
         int count = 0;
         while (it.hasNext()) {
             String Time = it.next().toString();
@@ -16,7 +17,14 @@ public class AirportReducer extends Reducer{
             maxTime = Math.max(time,maxTime);
             minTime = Math.min(time,minTime);
             count++;
-            
+            middleTime += time;
         }
+
+        if (count > 0 )
+            middleTime /= count;
+        else
+            return;
+        context.write();
+
     }
 }
