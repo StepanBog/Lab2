@@ -24,7 +24,7 @@ public class AirportReducer extends Reducer{
             middleTime /= count;
         else
             return;
-        context.write( new Text(airportName), new Text("Average time = " + middleTime + ));
+        context.write(new Text(airportName), new Text("Average time = " + middleTime + " Max time = " + maxTime + " Min time = " + minTime));
 
     }
 }
